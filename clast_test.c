@@ -26,6 +26,7 @@ int main()
 {
     int i, ii, jj;
     int j;         // для принтов
+    int ng = 0;
     float fz = 50; // порого обнаружения
     int sp_index_max = 0;
     int otm;
@@ -74,6 +75,7 @@ int main()
         jj = 1;
         if (otm == 1)
         {
+            ng++;
             yscs1->kes = 1;
             yscs1->k1 = sp_index_max;
             yscs1->k2 = sp_index_max;
@@ -126,7 +128,7 @@ int main()
         }
     }
     yscs1 = &scs1[0];
-    for (j = 0; j < MAX_OTM1_SCHS; j++)
+    for (j = 0; j < ng; j++)
     {
         printf("%d\t", yscs1->kes);
         yscs1++;
