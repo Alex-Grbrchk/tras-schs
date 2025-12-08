@@ -42,9 +42,7 @@ typedef struct
     float cko_pel; // СКО пеленга
     float f;       // частота
     float kci;
-    float ky_tr; // траверзный угол(рад) Qq=arcsin(2q/(Q-1));
-                 //   q=-64,...,0,...,64;
-                 //   Q=129 - количество ХН;
+    float ky_tr; // траверзный угол(рад) Qq=arcsin(2q/(Q-1)); q=-64,...,0,...,64; Q=129 - количество ХН;
 
     int pr_pchs_schs; // признак ДС/СЧС (0/1);
     int pr_brt;       // признак определенности борта (0/1/2-Н/ЛБ/ПБ);
@@ -63,11 +61,8 @@ typedef struct
 
 typedef struct
 {
-    // t_IO_NAV_PAST mass_nav;
-    int num_form_ds;
-    t_str_pchs_schs formul_ds[100];
-    int num_form_schs;
-    t_str_pchs_schs formul_schs[30];
-} t_IO_MASS_BN3;
+    int num_form;
+    t_str_pchs_schs formul[30];
+} t_IO_MASS_SCHS_CHD;
 
 #endif
